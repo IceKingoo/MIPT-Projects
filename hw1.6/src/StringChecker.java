@@ -9,15 +9,19 @@ public class StringChecker {
 
     }
 
-    public static boolean isPolindrome(String s) {
-        s = spaceRemove(s);
+    public void isPolindrome(String s) {
+        s = spaceRemove(s);//убираю пробелы в строке
         s = s.toLowerCase();
         char a[] = s.toCharArray();
         for (int i = 0; i < a.length; i++) {
-            if (a[i] != a[a.length - 1 - i]) return false;
+            if (a[i] != a[a.length - 1 - i]){
+                System.out.println("Не полиндром");
+                return;
+            }
         }
 
-        return true;
+        System.out.println("Полиндром");
+        return;
     }
 
 }

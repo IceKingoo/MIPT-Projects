@@ -9,18 +9,14 @@ public class Main {
 
                 {12, 0, -3, 1}};
 
-        int count = 0;
-        for (int i = 0; i < 3; i++) {
-            count+=IntArraySort.BoobleSort(a[i], (i + 1) % 2);
-        }
-
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 4; j++) {
-                System.out.print(a[i][j] + " ");
-            }
-            System.out.println();
-        }
-        System.out.println(count);
+        IntArraySort sort = new IntArraySort();
+        ArrayPrint print = new ArrayPrint();
+        System.out.println("Изначальный массив");
+        print.print(a);
+        int count = sort.oddSort(a);
+        System.out.println("Отсортированный массив");
+        print.print(a);
+        System.out.println("Число операций:"+count);
 
     }
 }

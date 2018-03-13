@@ -1,8 +1,14 @@
-import Family.Father;
+import Family.*;
 
 public class Main {
     public static void main(String[] args) {
-        Father Alexy = new Father("Male",35,"Alexy");
-        Alexy.aboutMe();
+        FamilyMember father = new Father("Male",35,"Alexy");
+        FamilyMember mama = new Mother("Female",33,"Nadejda");
+        FamilyMember daughter = new Daughter("Female",17,"Luba");
+        FamilyMember son = new Son("Male",19,"Leonid");
+        father.aboutMe();
+        mama.aboutMe();
+        daughter.aboutMe();
+        son.aboutMe();
     }
 }
